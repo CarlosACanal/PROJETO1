@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    color: whitesmoke;
+}
+ul {
+    list-style: none;
+    font-size: 16px;
+    font-style:unset;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+     background-image: url(./imagens/back\ 03.png);
+    background-repeat: no-repeat;
+    background-position: center center fixed;
+    background-size: cover;
+    /* background size: cover faz com que fique na tela toda */
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 55px ;
+    box-shadow: 1px 1px 10px 1px rgb(0, 0, 0);
+    /*Essa é bem legal, tem um efeito iluminado    */
+}
+
+header ul {
+    display: flex;  
+}
+
+header ul li{
+    padding: 10px;
+
+}
+
+header ul li a:hover{
+    transition: 200ms;
+}
+
+header ul li a:hover{
+    color: #cdcdcd;
+    text-decoration: underline;
+}
+
+header img {
+    max-width: 100px;
+    padding: 0px;
+}
+
+.container {
+    text-align: center;
+}
+
+.container .name h1 {
+    font-size: 80px;
+    -ms-text-combine-horizontal: initial;
+}
+
+.container .name h4 {
+    font-size: 30px;
+    font-weight: 550;
+}
+
+#arrow {
+    font-size: 28px;
+    cursor: pointer;
+    animation: blink 2s steps(5, start) infinite;
+
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+#animation {
+    transition: 300ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+
+}
+
+.active {
+    display: block !important ;
+}
+
+#about p {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.507);
+    border-radius: 5px 5px 5px 5px;
+    /* max está fazendo com q o p fique limitado em 600px e seja responsivo em diferentes telas */
+    margin: 0 auto;
+    
+}
+
+.form {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.form input {
+    width: 50%;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.form button {
+    width: 15%;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #000000, #959595);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: rgb(231, 230, 230);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 25px;
+    
+}
+
+.form button:hover{
+    background-position: left bottom;
+    color: white;
+}
+
+@media only screen and (max-width:768px) {
+    .form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .container .name h1 {
+        font-size: 30px;
+    }
+    .container .name h5 {
+        font-size: 15px;
+    }
+
+    #about p {
+       max-width: 80%; 
+       text-align: justify;
+    }
+
+}
